@@ -22,13 +22,15 @@ const App = ()=>{
 
   return (
     <div className="text-center">
-        <h1 className="text-center mt-3">Counter App</h1>
-        
+        <h1 className="text-center mt-5">Counter App</h1>
     <div>
 
-       {/* plus  */}
-    <div className="container d-flex justify-content-center p-3 text-center bg-dark">
+       
+    <div style={{
+      marginTop: '30px'
+    }} className="container d-flex justify-content-center p-3 text-center">
     <div className="btn-1">
+      {/* plus  */}
     <button
   style={{
     borderRadius: '50%',
@@ -36,13 +38,13 @@ const App = ()=>{
     height: '100px',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   }} className="btn btn-success mx-3 mb-3 px-0 py-0" onClick={counterPlus}><i className="fa-solid fa-plus"></i></button>
        
     </div>
          
       <div className="para">
-      <p className="text-center text-light mt-3 fs-1">{num}</p>
+      <p className="text-center  mt-3 fs-1">{num}</p>
       </div>
 
          <div className="btn-2">
@@ -61,7 +63,8 @@ const App = ()=>{
          </div>
     </div>
 
-  {/* reset  */}
+  <div className="btn-3 d-flex justify-content-center">
+    {/* reset  */}
   <button
   style={{
     borderRadius: '50%',
@@ -71,6 +74,7 @@ const App = ()=>{
     alignItems: 'center',
     justifyContent: 'center'
   }} className="btn btn-warning mx-3 mb-3 px-0 py-0" onClick={counterReset}>Reset</button> 
+  </div>
     </div>
 </div>
 
