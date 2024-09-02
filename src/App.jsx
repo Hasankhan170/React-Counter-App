@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-
-
-
-
 const App = ()=>{
   let [num,setNum] = useState(0)
 
@@ -11,7 +7,12 @@ const App = ()=>{
     setNum(num + 1)
   }
   const counterMinus = ()=>{
+    if(num === 0){
+      alert('Your current state is invalid')
+      return
+    }
     setNum(num -1)
+
   }
 
   return (
